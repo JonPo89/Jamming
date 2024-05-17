@@ -1,0 +1,23 @@
+:root {
+    --dark-colour: #2c3033;
+    --medium-colour: #4d5e61;
+    --bright-colour: #f07067;
+    --light-colour: #f1e8e3;
+  }
+
+#playlistName {
+  background-color: var(--dark-colour);
+  color: var(--light-colour);
+  border: none;
+  font-size: 1.5rem;
+  font-family: Poppins, sans-serif;
+}
+
+#savePlaylist{
+  background-color: var(--bright-colour);
+  color: var(--light-colour);
+  font-size: 1.4rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 1rem;
+
+}

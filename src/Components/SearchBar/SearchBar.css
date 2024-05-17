@@ -1,0 +1,28 @@
+:root {
+    --dark-colour: #2c3033;
+    --medium-colour: #4d5e61;
+    --bright-colour: #f07067;
+    --light-colour: #f1e8e3;
+  }
+
+form {
+    margin: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#search-bar {
+    background-color: white;
+    border-color: var(--dark-colour);
+    color: var(--dark-colour);
+    font-size: 1.8rem;
+    padding: 1rem 0rem;
+    margin: 3rem;
+    text-align: center;
+    width: 40%;
+    border-radius: 5px;
+}
+
+
