@@ -1,0 +1,12 @@
+.footer {
+    display: inline-flex;
+    width: 98%;
+    justify-content: space-between;
+    align-items: end;
+    padding-top: 1rem;
+}
+
+#spotify {
+    display: inline-flex;
+    align-items: center;
+}

@@ -1,137 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: #dbdbdb;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: start;
+    z-index: 0;
+    align-items: center;
+    box-sizing: border-box;
+}
+
 :root {
-  --dark-colour: #2c3033;
-  --medium-colour: #4d5e61;
-  --bright-colour: #f07067;
-  --light-colour: #f1e8e3;
+    --dark-colour: #2c3033;
+    --medium-colour: #4d5e61;
+    --bright-colour: #1DB954;
+    --light-colour: #dbdbdb;
 }
 
-html{
-  font-size: 16px;
-  padding: 0;
-  margin: 0;
-  background-color: var(--light-colour);
-  font-family: Poppins, sans-serif;
+.bold{
+    font-weight: bold;
 }
 
-*{
-  margin:0;
-  padding: 0;
-  color: var(--dark-colour);
-  font-weight: normal;
-}
-
-.App{
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-header {
-  background-color: var(--medium-colour);
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-}
-
-h1 {
-  color: var(--light-colour);
-  font-size: 3rem;
-}
-
-h1 .highlight {
-  color: var(--bright-colour);
-  font-weight: bold;
-}
-
-h2{
-  color: var(--light-colour);
-  font-family: Poppins, sans-serif;
-}
-
-#music {
-  width: 100%;
-  display: inline-flex;
-  justify-content: center;
-}
-
-#userName{
-  color: var(--dark-colour);
-  font-weight: bold;
-}
-
-.heading{
-  background-color: var(--dark-colour);
-  width: 100%;
-  border-bottom: 1px solid var(--bright-colour);
-  padding: 1rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.container{
-  width: 100%;
-  padding-right: 2rem;
-  height: 800px;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: baseline;
-  background-color: var(--medium-colour);
-  overflow-y:auto;
-  overflow-x:hidden;
-}
-
-.cont2{
-  width:40%;
-  padding-right: 2rem;
-  margin: 0 3rem;
-  margin-bottom: 3rem;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: baseline;
-}
-
-.listContainer{
-  width: 100%;
-  padding: 1rem 0;
-  margin: 0 2rem;
-  display: inline-flex;
-  flex-direction: column;
-  
-
-  justify-content: center;
-}
-
-.track{
-  color: var(--light-colour);
-}
-
-.trackBox{
-  display: inline-flex;
-  background-color: var(--medium-colour);
-  width: 100%;
-  margin: 0;
-  padding: 1rem;
-  border-bottom: 1px solid pink;
-  align-items: center;
-}
-
-.addSong{
-  background-color: transparent;
-  border: transparent;
-  padding-right: 1rem;
-}
-
-.trackBox:hover{
-  cursor: pointer;
-  background-color: #6d8387;
+p{
+    font-family: "Roboto", sans-serif;
 }
 
 h4{
-  opacity: .6;
+    font-family: "Roboto", sans-serif;
 }
 
+h5{
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+}

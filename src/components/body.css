@@ -1,0 +1,104 @@
+::-webkit-scrollbar {
+    width: 12px; /* Width of the entire scrollbar */
+    height: 12px; /* Height of the scrollbar if it's horizontal */
+}
+
+/* The track (background) of the scrollbar */
+::-webkit-scrollbar-track {
+    background: #00000050;
+}
+
+/* The handle (scrollbar thumb) */
+::-webkit-scrollbar-thumb {
+    background: #333; 
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.body {
+    display: inline-flex;
+    width: 98%;
+    align-items: end;
+    justify-content: space-around;
+    background-color: var(--dark-colour);
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    box-shadow: 0px 3px 5px 4px rgba(0,0,0,0.3);
+    margin-top: 1.5rem;
+}
+
+.box {
+    width: 49%;
+    border-radius: 10px;
+    border: 1px solid #ffffff20;
+    background-color: #00000020;
+    overflow: hidden;
+}
+
+.search{
+    width: 100%;
+}
+
+#searchBar {
+    background-color: transparent;
+    border: none;
+    color: var(--light-colour);
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0;
+    transition: all 0.5s;
+}
+
+#searchBar:hover {
+    background-color:#00000050;
+}
+
+.tracklist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 65vh;
+    overflow:auto;
+}
+
+.playlistNameBox {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+#playlistName {
+    background-color: transparent;
+    border: none;
+    color: var(--light-colour);
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0;
+    transition: all 0.5s;
+}
+
+#playlistName:hover {
+    background-color:#00000050;
+}
+
+.playlistLogo {
+    height: 100%;
+    width: 2.5rem;
+    padding: 0.35rem;
+    margin: 0 0.1rem;
+    color: var(--light-colour);
+    transition: background-color 0.5s;
+}
+
+.playlistLogo:hover{
+    background-color: #ffffff20;
+    cursor: pointer;
+}
