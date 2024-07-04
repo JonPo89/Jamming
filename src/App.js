@@ -17,13 +17,10 @@ function App() {
   useEffect (() => {
     if (!accessToken) {
       dispatch(getAccessToken());
+    } else {
+      dispatch(getUserDetails(accessToken));
     }
-  })
-
-  if (accessToken) {
-    dispatch(getUserDetails(accessToken));
-  }
-
+  }, [accessToken, dispatch])
 
   if (!accessToken) {
     return (
