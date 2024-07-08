@@ -57,7 +57,7 @@ export function Playlist () {
             setIsSaving(false);
             
         }
-    }, [isSaving, playlistId, dispatch, accessToken])
+    })
     
     return (
         <div className="box">
