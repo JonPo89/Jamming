@@ -102,3 +102,12 @@
     background-color: #ffffff20;
     cursor: pointer;
 }
+
+.hoverMessage{
+    background-color: var(--light-colour);
+    border: 1px solid var(--dark-colour);
+    position: absolute;
+    padding: 0.5rem;
+    border-radius: 5px;
+    pointer-events: none;
+}

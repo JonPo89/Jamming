@@ -3,7 +3,7 @@ import {createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 const clientSecret = process.env.REACT_APP_CLIENT_SECRET;
 const clientId = process.env.REACT_APP_CLIENT_ID;
 
-const redirectUri = "http://localhost:3000/";
+const redirectUri = "https://jammming-porter.netlify.app/";
 const code = new URLSearchParams(window.location.search).get('code');
 const scope = [
     "user-read-email",
