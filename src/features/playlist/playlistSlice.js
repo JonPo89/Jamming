@@ -48,7 +48,6 @@ export const addSongsToPlaylist = createAsyncThunk(
         });
         if (response.ok) {
             const jsonResponse = await response.json();
-            console.log(jsonResponse);
             return state.playlist.playlist;
 
         } else {

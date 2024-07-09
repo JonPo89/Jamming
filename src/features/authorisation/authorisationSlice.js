@@ -4,6 +4,7 @@ const clientSecret = process.env.REACT_APP_CLIENT_SECRET;
 const clientId = process.env.REACT_APP_CLIENT_ID;
 
 const redirectUri = "https://main--jammming-porter.netlify.app/";
+//const redirectUri = "http://localhost:3000/";
 const code = new URLSearchParams(window.location.search).get('code');
 const scope = [
     "user-read-email",
@@ -15,8 +16,6 @@ const scope = [
     "user-read-playback-state",
     "user-modify-playback-state"
 ];
-
-
 
 export const getAccessToken = createAsyncThunk(
     "authorisation/getAccessToken",
@@ -57,13 +56,15 @@ export const getUserDetails = createAsyncThunk(
                 userName: jsonResponse.display_name,
                 userId: jsonResponse.id
         }
+    } else {
+        throw new Error("Failed to get user details");
     }}
 )
 
 const authorisationSlice = createSlice({
     name: 'authorisation',
     initialState: {
-        loginLink: `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&scope=${scope.join("%20")}`,
+        loginLink: `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&scope=${scope.join(" ")}`,
         accessToken: "",
         userDetails: {},
         isLoggedIn: false,

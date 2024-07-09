@@ -10,9 +10,10 @@ export function Search (){
     const accessToken = useSelector(selectAccessToken);
 
     const onChange = (e) => {
-        setSearchTerm(e.target.value);
+        const value = e.target.value;
+        setSearchTerm(value);
         if (searchTerm.length > 1) {
-            dispatch(getTracks({accessToken: accessToken, searchTerm: searchTerm}));
+            dispatch(getTracks({accessToken: accessToken, searchTerm: value}));
         } else {
             dispatch(clearSearch());
         }

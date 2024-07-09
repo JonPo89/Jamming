@@ -111,3 +111,47 @@
     border-radius: 5px;
     pointer-events: none;
 }
+
+.smallScreen {
+    display: none;
+    width: 97%;
+}
+
+#toggleBorder {
+    width: 3.5rem;
+    height: 2rem;
+    background-color: #00000050;
+    border-radius: 1rem;
+    margin-right: 1rem;
+}
+
+#toggleBall {
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    background-color: var(--light-colour);
+    margin: 0.15rem;
+    position:relative;
+}
+
+@media only screen and (max-width: 800px) {
+    .body {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #playlist {
+        width: 97%;
+    }
+
+    #tracklist {
+        width: 97%;
+    }
+
+    .smallScreen {
+        color: var(--light-colour);
+        display: flex;
+        margin-bottom: 0.5rem;
+    }
+
+}

@@ -3,7 +3,7 @@ import { Header } from './components/Header';
 import { Body } from './components/Body';
 import { Login } from './components/Login';
 import { Footer } from './components/Footer';
-import { selectAccessToken, getAccessToken, getUserDetails} from './features/authorisation/authorisationSlice';
+import { selectAccessToken, getAccessToken, getUserDetails, selectUserId} from './features/authorisation/authorisationSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 
@@ -11,6 +11,7 @@ function App() {
 
   const dispatch = useDispatch();
   const accessToken = useSelector(selectAccessToken);
+  const userId = useSelector(selectUserId);
 
 
   
@@ -20,7 +21,8 @@ function App() {
     } else {
       dispatch(getUserDetails(accessToken));
     }
-  }, [accessToken, dispatch])
+  }, [accessToken, dispatch]);
+
 
   if (!accessToken) {
     return (
@@ -33,8 +35,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Body />
-      <Footer />
+      {userId ? (
+        <>
+          <Body />
+          <Footer />
+        </>
+      ) : <h2 id="noUser">Unfortunately you are not currently authorised. <br/> Please contact jonporter89@gmail.com.</h2>}
+
     </div>
   );
 }

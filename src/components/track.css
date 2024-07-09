@@ -36,6 +36,11 @@
     cursor: pointer;
 }
 
+#addSongTick{
+    color: var(--bright-colour);
+    transition: all 0.5s;
+}
+
 .trackDetails {
     display: inline-flex;
     flex-direction: column;

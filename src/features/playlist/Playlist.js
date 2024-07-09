@@ -19,7 +19,7 @@ import { GrPowerReset } from "react-icons/gr";
 export function Playlist () {
     const [playlistNameInput, setPlaylistNameInput] = useState('');
     const [isSaving, setIsSaving] = useState(false);
-    const [hoverMessageVisible, setHoverMessageVisible] = useState(0);
+    const [hoverMessageVisible, setHoverMessageVisible] = useState("none");
     const [hoverMessage, setHoverMessage] = useState("");
     const [hoverPosition, setHoverPosition] = useState ({ x: 0, y: 0});
     
@@ -70,22 +70,26 @@ export function Playlist () {
     }, [isSaving, playlistId, dispatch, accessToken]);
 
     const mouseEnterMessageSave = () => {
-        setHoverMessageVisible(1);
+        setHoverMessageVisible("flex");
+        if (playlistId){
+            setHoverMessage("Update Playlist")
+        } else {
         setHoverMessage("Save Playlist");
+        }
     };
 
     const mouseLeaveMessageSave = () => {
-        setHoverMessageVisible(0);
+        setHoverMessageVisible("none");
         setHoverMessage("");
     }
 
     const mouseEnterMessageNew = () => {
-        setHoverMessageVisible(1);
+        setHoverMessageVisible("flex");
         setHoverMessage("New Playlist");
     };
 
     const mouseLeaveMessageNew = () => {
-        setHoverMessageVisible(0);
+        setHoverMessageVisible("none");
         setHoverMessage("");
     }
 
@@ -100,7 +104,7 @@ export function Playlist () {
     }, []);
     
     return (
-        <div className="box">
+        <div className="box"  id="playlist">
             <div className="playlistNameBox">
                 <input id="playlistName" type="text" placeholder="Playlist Name" onChange={onPlaylistNameChange} value={playlistNameInput}/>
                 <GrPowerReset 
@@ -120,7 +124,7 @@ export function Playlist () {
             </div>
             <div className="tracklist">
                 {playlistSongs ? Object.values(playlistSongs).map(track => (
-                    <div className="track" key={track.id} onClick={() => removeTrack(track.UID)}>
+                    <div className="track" key={track.UID} onClick={() => removeTrack(track.UID)}>
                         <img className="albumArt" src={track.albumArt[0].url} alt={`${track.songName} album art`} />     
                         <div className="trackDetails" >
                             <h4 className="trackName">{track.songName}</h4>  
@@ -135,7 +139,7 @@ export function Playlist () {
                     </div>                
             )) : null}
             </div>
-            <h4 className="hoverMessage" style={{opacity: hoverMessageVisible, top: hoverPosition.y + 10, left: hoverPosition.x - 100}}>{hoverMessage}</h4>
+            <h4 className="hoverMessage" style={{display: hoverMessageVisible, top: hoverPosition.y + 10, left: hoverPosition.x - 100}}>{hoverMessage}</h4>
         </div>
     );
 }

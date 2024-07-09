@@ -23,4 +23,9 @@ Jon Porter
 * 2.0
     * Complete revamp on the design and way the app works.
 
+* 2.2
+    * Added window size responsiveness
+    * Added reactive animation when song is added
+    * Added more error prevention
+
 * [CodeCademy](https://www.codecademy.com/)

@@ -19,6 +19,7 @@ export const getTracks = createAsyncThunk(
                     album: track.album.name,
                     albumArt: track.album.images,
                     uri: track.uri,
+
                 }
             });
             return tracks;
@@ -39,7 +40,7 @@ const trackSlice = createSlice({
     reducers: {
         clearSearch: (state) => {
             state.results = [];
-        }
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -60,6 +61,6 @@ const trackSlice = createSlice({
 
 });
 
-export const { clearSearch } = trackSlice.actions;
+export const { clearSearch, updatedAdded } = trackSlice.actions;
 export const selectTracks = (state) => state.track.results;
 export default trackSlice.reducer;

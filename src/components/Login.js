@@ -13,10 +13,7 @@ export function Login () {
         }, 10);
         return () => clearInterval(interval);
     })
-
-    const clientSecret = process.env.REACT_APP_CLIENT_SECRET;
-    console.log(clientSecret)
-    
+   
    
     return (
         <div className="login">
