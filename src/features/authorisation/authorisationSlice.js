@@ -35,6 +35,7 @@ export const getAccessToken = createAsyncThunk(
         
         if (response.ok) {
             const jsonResponse = await response.json();
+            window.history.replaceState({}, document.title, '/');
             return jsonResponse.access_token;
         } else {
             throw new Error("Failed to get access token");
