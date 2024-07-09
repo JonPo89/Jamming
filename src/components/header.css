@@ -12,7 +12,7 @@
 
 .logo {
     padding: 0.5rem 1rem;
-    color: var(--light-colour);
+    color: white;
     font-family: "Teko", sans-serif;
     font-size: 2rem;
 }
@@ -44,7 +44,7 @@
     justify-content: center;
     align-items: center;
     justify-self: center;
-    color: var(--light-colour);
+    color: white;
 }
 
 .backHome {
