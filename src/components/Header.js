@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import './header.css';
 import { selectUserName } from "../features/authorisation/authorisationSlice";
 import { useSelector } from "react-redux";
-import { SmallScreen } from "./SmallScreen";
 
 export function Header () {
     const [ rotate, setRotate ] = useState(0);
