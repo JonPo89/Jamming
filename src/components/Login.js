@@ -21,7 +21,9 @@ export function Login () {
                 <a href={loginLink}>
                     <h3 className="loginLogo">ja<div className="loginSpinLogo" style={{rotate:`${rotate}deg`}}>mmm</div>ing</h3>
                 </a>
+                
             </div>
+            <h2>Created By <a href="https://jonporterfolio.com/" target="_blank" rel="norefferer">Jon Porter</a></h2>
         </div>
 
     )

@@ -13,6 +13,34 @@ function App() {
   const accessToken = useSelector(selectAccessToken);
   const userId = useSelector(selectUserId);
 
+  const copyEmail = () => {
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText("jonporter89@gmail.com").then(() => {
+            alert("Email copied to clipboard.");
+        }).catch(err => {
+            console.error("Failed to copy email:", err);
+            alert("Failed to copy email. Please try again.");
+        });
+    } else {
+        // Fallback for older browsers or non-secure contexts
+        const textArea = document.createElement("textarea");
+        textArea.value = "jonporter89@gmail.com";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        try {
+            document.execCommand('copy');
+            alert("Email copied to clipboard.");
+        } catch (err) {
+            console.error("Fallback: Failed to copy email:", err);
+            alert("Failed to copy email. Please try again.");
+        }
+
+        document.body.removeChild(textArea);
+    }
+  }
+
 
   
   useEffect (() => {
@@ -40,7 +68,7 @@ function App() {
           <Body />
           <Footer />
         </>
-      ) : <h2 id="noUser">Unfortunately you are not currently authorised. <br/> Please contact jonporter89@gmail.com.</h2>}
+      ) : <h2 id="noUser">Unfortunately you are not currently authorised. <br/> Please contact <span id="emailLink" onClick={copyEmail}>jonporter89@gmail.com</span>.</h2>}
 
     </div>
   );
